@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KL.PagedList", "KL.PagedList\KL.PagedList.csproj", "{474680B6-F9CE-4040-962C-C315327E1E23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KL.PagedList.Tests", "KL.PagedList.Tests\KL.PagedList.Tests.csproj", "{72D82470-853A-43BB-9136-5E3085653416}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4F98ADEA-B256-483A-9BE9-75FCAC102CEA}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{474680B6-F9CE-4040-962C-C315327E1E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{474680B6-F9CE-4040-962C-C315327E1E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{474680B6-F9CE-4040-962C-C315327E1E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{474680B6-F9CE-4040-962C-C315327E1E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72D82470-853A-43BB-9136-5E3085653416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D82470-853A-43BB-9136-5E3085653416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D82470-853A-43BB-9136-5E3085653416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D82470-853A-43BB-9136-5E3085653416}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F3E5A18-1C1E-48A8-9965-CAAB54541C29}
+	EndGlobalSection
+EndGlobal
