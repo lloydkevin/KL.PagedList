@@ -17,6 +17,12 @@ namespace KL.PagedList
                 throw new ArgumentNullException(nameof(data));
             }
 
+            if (totalItems < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(totalItems),
+                    $"{nameof(totalItems)} cannot be less than 0");
+            }
+
             if (currentPage < 1)
             {
                 throw new ArgumentOutOfRangeException(nameof(currentPage),
@@ -29,25 +35,15 @@ namespace KL.PagedList
                     $"{nameof(pageSize)} cannot be less than 1");
             }
 
-            if (totalItems < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(totalItems),
-                    $"{nameof(totalItems)} cannot be less than 0");
-            }
-
             // calculate total pages
             var totalPages = totalItems > 0
                 ? (int)Math.Ceiling(totalItems / (decimal)pageSize)
                 : 0;
 
-            // ensure current page isn't out of range
-            if (currentPage < 1)
+            if (totalPages > 0 && currentPage > totalPages)
             {
-                currentPage = 1;
-            }
-            else if (currentPage > totalPages)
-            {
-                currentPage = totalPages;
+                throw new ArgumentOutOfRangeException(nameof(currentPage),
+                    $"{nameof(currentPage)} cannot be greater than totalPages");
             }
 
             int startPage, endPage;
