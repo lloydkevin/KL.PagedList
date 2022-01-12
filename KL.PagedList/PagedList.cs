@@ -12,8 +12,33 @@ namespace KL.PagedList
     {
         public PagedList(List<T> data, int totalItems, int currentPage = 1, int pageSize = 10, int maxPages = 10)
         {
+            if (data is null)
+            {
+                throw new ArgumentNullException(nameof(data));
+            }
+
+            if (currentPage < 1)
+            {
+                throw new ArgumentOutOfRangeException(nameof(currentPage),
+                    $"{nameof(currentPage)} cannot be less than 1");
+            }
+
+            if (pageSize < 1)
+            {
+                throw new ArgumentOutOfRangeException(nameof(pageSize),
+                    $"{nameof(pageSize)} cannot be less than 1");
+            }
+
+            if (totalItems < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(totalItems),
+                    $"{nameof(totalItems)} cannot be less than 0");
+            }
+
             // calculate total pages
-            var totalPages = (int)Math.Ceiling(totalItems / (decimal)pageSize);
+            var totalPages = totalItems > 0
+                ? (int)Math.Ceiling(totalItems / (decimal)pageSize)
+                : 0;
 
             // ensure current page isn't out of range
             if (currentPage < 1)
