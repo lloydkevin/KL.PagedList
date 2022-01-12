@@ -11,7 +11,6 @@ namespace KL.PagedList
         }
 
         public static PaginationData<T> ToPagedList<T>(this IQueryable<T> source, int currentPage = 1, int pageSize = 10, int maxPages = 10)
-
         {
             var count = source.Count();
             var items = source.Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();

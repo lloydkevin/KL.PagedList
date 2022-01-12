@@ -89,6 +89,7 @@ namespace KL.PagedList
             TotalItems = totalItems;
             CurrentPage = currentPage;
             PageSize = pageSize;
+
             TotalPages = totalPages;
             StartPage = startPage;
             EndPage = endPage;
@@ -97,7 +98,7 @@ namespace KL.PagedList
             HasPrevious = currentPage > 1;
             HasNext = currentPage < totalPages;
             IsFirstPage = currentPage == 1;
-            IsLastPage = currentPage == totalPages - 1;
+            IsLastPage = currentPage == totalPages;
         }
     }
 }
